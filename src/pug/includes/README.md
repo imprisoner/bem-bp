@@ -1,2 +1,2 @@
 # blocks folder
-    repeating static structures 
+    repeated static structures like sections, repeated on more than one place

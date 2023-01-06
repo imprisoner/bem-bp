@@ -1,2 +1,2 @@
 # layouts folder
-    layouts to extend pages from
+    layout components (header, footer, etc.) and layouts to extend pages from
