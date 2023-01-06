@@ -1,2 +1,2 @@
 # base folder
-    like buttons, icons, etc
+    simple mixin components like buttons, icons, etc
