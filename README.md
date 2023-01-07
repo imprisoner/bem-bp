@@ -1,2 +1,2 @@
-# chris-v1
- melanish landing layouts
+# bem-bp
+    scss/pug/js/bem boilerplte for layouts
