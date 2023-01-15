@@ -4,7 +4,6 @@ import { GLOBS } from "../config.js"
 
 const { src } = gulp
 
-export default function clean(done) {
-  src(GLOBS.CLEAN, {read: false}).pipe(gulpClean())
-  done()
+export default function clean() {
+  return src(GLOBS.CLEAN, {read: false}).pipe(gulpClean())
 }
