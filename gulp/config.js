@@ -7,7 +7,8 @@ export const DIRECTORIES = {
   ASSETS: "assets/",
   FONTS: "assets/fonts",
   IMAGES: "assets/images",
-  SVG: "assets/svg"
+  SVG: "assets/svg",
+  SCRIPTS: "js/"
 }
 
 export const GLOBS = {
@@ -30,6 +31,14 @@ export const GLOBS = {
   SVG: {
     SRC: SOURCE_FOLDER + DIRECTORIES.SVG + "**/*",
     DEST: BUILD_FOLDER + DIRECTORIES.SVG
+  },
+  SCRIPTS_PAGES: {
+    SRC: SOURCE_FOLDER + DIRECTORIES.SCRIPTS + "pages/*.js",
+    DEST: BUILD_FOLDER + DIRECTORIES.SCRIPTS
+  },
+  SCRIPTS_VENDOR: {
+    SRC: SOURCE_FOLDER + DIRECTORIES.SCRIPTS + "vendor/*.js",
+    DEST: BUILD_FOLDER + DIRECTORIES.SCRIPTS + "vendor/"
   },
   CLEAN: BUILD_FOLDER + "*"
 }
