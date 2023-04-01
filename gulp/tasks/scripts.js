@@ -7,6 +7,7 @@ import rename from "gulp-rename";
 const { src, dest } = gulp
 
 export function scriptsPages(done) {
+  // TODO src makes no sense
   src(GLOBS.SCRIPTS_PAGES.SRC)
     .pipe(
       webpack({
