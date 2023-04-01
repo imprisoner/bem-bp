@@ -22,7 +22,7 @@ const pageScripts = fs
 //   .map(filename => path.resolve(UTILS_DIR, filename))
 
 export default {
-  mode: "development",
+  mode: "production",
   resolve: {
     extensions: [".js", ".mjs"],
     alias: {

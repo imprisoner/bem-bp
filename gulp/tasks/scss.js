@@ -14,10 +14,11 @@ const sass = gulpSass(dartSass)
 export default function scss(done) {
   src(GLOBS.SCSS.SRC)
     .pipe(sourcemaps.init())
-    .pipe(groupMediaQueries())
     .pipe(sass({
-      includePaths: ["./node_modules"]
+      includePaths: ["./node_modules"],
+      outputStyle: "expanded"
     }).on("error", sass.logError))
+    .pipe(groupMediaQueries())
     .pipe(autoprefixer({
       cascade: true
     }))
