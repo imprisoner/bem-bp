@@ -7,7 +7,8 @@ const { src, dest } = gulp
 export default function pug(done) {
   src(GLOBS.PUG.SRC)
     .pipe(pugCompiler({
-      verbose: true
+      verbose: true,
+      pretty: true
     }))
     .pipe(dest(GLOBS.PUG.DEST))
   done()

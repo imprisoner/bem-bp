@@ -13,7 +13,7 @@ export const DIRECTORIES = {
 
 export const GLOBS = {
   PUG: {
-    SRC: SOURCE_FOLDER + DIRECTORIES.PUG + "pages/*.pug",
+    SRC: SOURCE_FOLDER + DIRECTORIES.PUG + "*.pug",
     DEST: BUILD_FOLDER
   },
   SCSS: {
