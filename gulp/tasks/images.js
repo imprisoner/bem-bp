@@ -3,7 +3,7 @@ import imagemin, { mozjpeg, optipng, gifsicle } from 'gulp-imagemin'
 import { GLOBS } from "../config.js"
 
 const { src, dest } = gulp
-
+console.log(GLOBS.IMAGES)
 export default function images(done) {
   src(GLOBS.IMAGES.SRC)
     .pipe(imagemin([

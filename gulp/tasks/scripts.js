@@ -4,17 +4,32 @@ import webpackConfig from '../webpack.config.js'
 import { GLOBS } from "../config.js"
 import uglify from "gulp-uglify";
 import rename from "gulp-rename";
+import named from 'vinyl-named';
+import {Transform} from "stream"
+import path from 'path';
 const { src, dest } = gulp
 
+const noMapFiles = () => new Transform({
+  transform (file, enc, cb) {
+    const {base: filename} = path.parse(file.path)
+    
+    const isSourceMap = /\.map$/.test(filename);
+    if (!isSourceMap) this.push(file);
+    cb()
+  },
+  objectMode: true
+})
+
 export function scriptsPages(done) {
-  // TODO src makes no sense
   src(GLOBS.SCRIPTS_PAGES.SRC)
-    .pipe(
-      webpack({
-        config: webpackConfig,
-      })
+  .pipe(named())
+  .pipe(
+    webpack({
+      config: webpackConfig,
+    })
     )
     .pipe(dest(GLOBS.SCRIPTS_PAGES.DEST))
+    .pipe(noMapFiles())
     .pipe(uglify())
     .on("error", function (err) {
       console.log(err.toString());

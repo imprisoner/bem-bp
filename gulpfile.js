@@ -1,4 +1,4 @@
-import gulp from 'gulp'
+import gulp from "gulp";
 // tasks imports
 import {
   pug,
@@ -10,18 +10,21 @@ import {
   serve,
   watch,
   scriptsPages,
-  scriptsVendor
-} from './gulp/tasks/index.js'
+  scriptsVendor,
+} from "./gulp/tasks/index.js";
 
-const { series } = gulp
+const { series } = gulp;
 
-
-export const build = series(clean, pug, scss, fonts, images, svg, scriptsPages, scriptsVendor);
-export const dev = series(
+export const build = series(
   clean,
-  build,
-  serve,
-  watch
-  )
-  
-export const cleanOutput = clean
+  pug,
+  scss,
+  fonts,
+  images,
+  svg,
+  scriptsPages,
+  scriptsVendor
+);
+export const dev = series(clean, build, serve, watch);
+
+export const cleanOutput = clean;

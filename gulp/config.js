@@ -5,8 +5,8 @@ export const DIRECTORIES = {
   PUG: "pug/",
   SCSS: "scss/",
   ASSETS: "assets/",
-  FONTS: "assets/fonts",
-  IMAGES: "assets/images",
+  FONTS: "assets/fonts/",
+  IMAGES: "assets/images/",
   SVG: "assets/svg",
   SCRIPTS: "js/"
 }
@@ -33,7 +33,7 @@ export const GLOBS = {
     DEST: BUILD_FOLDER + DIRECTORIES.SVG
   },
   SCRIPTS_PAGES: {
-    SRC: SOURCE_FOLDER + DIRECTORIES.SCRIPTS + "pages/*.js",
+    SRC: SOURCE_FOLDER + DIRECTORIES.SCRIPTS + "*.js",
     DEST: BUILD_FOLDER + DIRECTORIES.SCRIPTS
   },
   SCRIPTS_VENDOR: {
